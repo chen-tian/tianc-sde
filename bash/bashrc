@@ -1,0 +1,4 @@
+
+alias vi='gvim >/dev/null 2>&1' 
+
+export PATH=/home/tianc/git/tachyon/bin:$PATH 
