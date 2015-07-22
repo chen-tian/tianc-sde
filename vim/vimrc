@@ -55,3 +55,10 @@ let g:clang_format#style_options = {
 
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+
+let g:ycm_confirm_extra_conf = 0
+
+filetype plugin indent on
+set tabstop=2
+set shiftwidth=2
+set expandtab

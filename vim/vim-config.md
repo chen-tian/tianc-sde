@@ -6,7 +6,7 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim #type in  :PluginInstall (YouCompleteMe may Fail)
 
-# to install YouCompleteme, download clang-llvm first
+#To install YouCompleteme, download clang-llvm first
 
  cd ~/.vim/bundle
 
@@ -30,9 +30,7 @@ vim #type in  :PluginInstall (YouCompleteMe may Fail)
 
  cd ycm_build/
 
- cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
-
- cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=~/utilspace/clang+llvm-3.6.0-x86_64-linux-gnu/ . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+ cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=~/utilSpace/clang+llvm-3.6.0-x86_64-linux-gnu/ . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 
  make ycm_support_libs
 
@@ -40,8 +38,18 @@ vim #type in  :PluginInstall (YouCompleteMe may Fail)
 
 #to make vim-clang-format work:
 
- sudo cp ~/utilspace/clang+llvm-3.6.0-x86_64-linux-gnu/bin/clang-format /usr/bin
+ sudo cp ~/utilSpace/clang+llvm-3.6.0-x86_64-linux-gnu/bin/clang-format /usr/bin
+
+#to get .ycm_extra_conf.py loaded
+
+cp /home/tianc/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py  ~
+
+echo "let g:ycm_confirm_extra_conf = 0" >> ~/.vimrc
+
+#read more settings for ycm at https://github.com/Valloric/YouCompleteMe/blob/master/README.md
 
 # a lot of good plugins
 
 https://github.com/amix/vimrc
+
+
