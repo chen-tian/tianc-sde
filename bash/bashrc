@@ -1,4 +1,6 @@
 
 alias vi='gvim >/dev/null 2>&1' 
 
-export PATH=/home/tianc/git/tachyon/bin:$PATH 
+export PATH=/home/tianc/git/tachyon/bin:/home/tianc/workSpace/common-dev-env/vagrant:$PATH
+
+export PS1="\e[32;1m\u@\h:\W\\$\[$(tput sgr0)\] \e[0m"
