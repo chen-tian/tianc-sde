@@ -1,0 +1,4 @@
+#E:Encountered a section with no Package: header, E:Problem with MergeList
+
+sudo rm /var/lib/apt/lists/* -vf
+sudo apt-get update
